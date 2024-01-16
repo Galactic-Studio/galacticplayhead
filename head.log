@@ -1,0 +1,51 @@
+17:57:10.169 INFO  Server Required 
+17:57:10.183 INFO  Port 79087 is in use, trying another one... 
+17:57:10.186 INFO  46520 
+17:57:10.186 INFO  Downloading Files 
+17:57:09.526 INFO  Logger Started 
+17:57:10.407 INFO  test/test/ 
+17:58:00.365 INFO  Logger Started 
+17:58:00.981 INFO  Server Required 
+17:58:00.987 INFO  Port 71229 is in use, trying another one... 
+17:58:00.989 INFO  40321 
+17:58:00.989 INFO  Downloading Files 
+17:58:01.127 INFO  test/test/ 
+18:00:02.507 INFO  Logger Started 
+18:00:03.144 INFO  Server Required 
+18:00:03.152 INFO  38514 
+18:00:03.152 INFO  Downloading Files 
+18:00:03.331 INFO  test/test/ 
+18:00:03.331 INFO  test/test/main.js 
+18:00:03.331 INFO  test/test/package.json 
+18:00:03.331 INFO  test/test/startup.sh 
+18:00:03.331 INFO  Files Downloaded 
+18:00:03.331 INFO  servers\test-38514\setupServer.sh 
+18:00:03.378 INFO  Starting Child Server 
+18:00:47.513 INFO  Logger Started 
+18:00:48.151 INFO  Server Required 
+18:00:48.158 INFO  32258 
+18:00:48.158 INFO  Downloading Files 
+18:00:48.296 INFO  test/test/ 
+18:04:04.653 INFO  Logger Started 
+18:04:05.305 INFO  Server Required 
+18:04:05.311 INFO  Port 69448 is in use, trying another one... 
+18:04:05.311 INFO  Port 83134 is in use, trying another one... 
+18:04:05.311 INFO  Port 89192 is in use, trying another one... 
+18:04:05.311 INFO  Port 84281 is in use, trying another one... 
+18:04:05.313 INFO  48867 
+18:04:05.313 INFO  Downloading Files 
+18:04:05.501 INFO  test/test/ 
+18:04:05.501 INFO  Is dir 
+18:04:05.501 INFO  test/test/main.js 
+18:05:33.836 INFO  Logger Started 
+18:05:34.492 INFO  Server Required 
+18:05:34.499 INFO  57172 
+18:05:34.499 INFO  Downloading Files 
+18:05:34.673 INFO  test/test/ 
+18:05:34.673 INFO  Is dir 
+18:05:34.673 INFO  test/test/main.js 
+18:05:34.811 INFO  test/test/package.json 
+18:05:34.875 INFO  test/test/startup.sh 
+18:05:34.935 INFO  Files Downloaded 
+18:05:34.935 INFO  servers\test-57172\setupServer.sh 
+18:05:34.938 INFO  Starting Child Server 

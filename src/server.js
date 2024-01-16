@@ -68,7 +68,8 @@ class ChildServer {
            log.info("Downloading Files")
            await this.downloadFiles()
            log.info("Files Downloaded")
-           const scriptPath = path.join( __dirname,'servers', `${this.serverId}-${this.port}`, 'setupServer.sh');
+           const scriptPath = path.join( 'servers', `${this.game}-${this.port}`, 'setupServer.sh');
+           log.info(scriptPath)
            await exfs.ensureFile(scriptPath);
            log.info("Starting Child Server")
            fs.chmodSync(scriptPath, '755');
@@ -94,15 +95,25 @@ class ChildServer {
             if (!files.Contents) {
                 throw new Error('Folder not found or is empty');
             }
-            // for (const object of files.Contents) {
-            //     const getObjectCommand = new GetObjectCommand({
-            //         Bucket: "galacticstudio",
-            //         Key: object.key
-            //     });
-            //     const { Body } = await s3Client.send(getObjectCommand);
-            //     const pipeline = promisify(stream.pipeline);
-            //     await pipeline(Body, fs.createWriteStream(`${this.serverId}-${this.port}`));
-            // }
+            for (const object of files.Contents) {
+                log.info(object.Key)
+                const getObjectCommand = new GetObjectCommand({
+                    Bucket: "galacticstudio",
+                    Key: object.Key
+                });
+                if(object.Key.endsWith("/")){
+                    log.info("Is dir")
+                    continue
+                }
+                const dir = path.join('servers', `${this.game}-${this.port}`);
+                if (!fs.existsSync(dir)){
+                    fs.mkdirSync(dir, { recursive: true });
+                }
+                const { Body } = await s3Client.send(getObjectCommand);
+                const pipeline = promisify(stream.pipeline);
+                await pipeline(Body, fs.createWriteStream(`${dir}/${path.basename(object.Key)}`));
+            }
+            resolve()
         }).catch(err=>{
             log.info(err)
         })
