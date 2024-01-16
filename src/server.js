@@ -13,8 +13,8 @@ const s3Client = new S3({
     endpoint: "https://nyc3.digitaloceanspaces.com",
     region: "us-east-1",
     credentials: {
-        accessKeyId: process.env.SPACES_KEY,
-        secretAccessKey: process.env.SPACES_SECRET
+        accessKeyId: "DO002CPG3V9ME6X2BYCJ",
+        secretAccessKey: "vMAmirYIhRkYXNb4h6nlw//U3mCBWPzMz0Z8dKQbt1U"
     }
 });
 function checkPort(port) {
@@ -99,4 +99,8 @@ class ChildServer {
             }
         })
     }
+}
+
+module.exports = {
+    ChildServer
 }
