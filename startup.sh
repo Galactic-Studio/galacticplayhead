@@ -3,7 +3,7 @@
 # Set the HOME environment variable
 export HOME=/home/root
 
-exec > ~/startLog.out 2>&1
+exec > startLog.out 2>&1
 
 # Configure Nginx to proxy requests to Galactic Studio
 EXPRESS_PORT=8080
