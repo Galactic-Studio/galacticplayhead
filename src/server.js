@@ -65,9 +65,12 @@ class ChildServer {
        return new Promise(async (resolve, reject) => {
            this.port = await ChildServer.generatePort()
            this.gamePort = this.port+1;
+           log.info("Downloading Files")
            await this.downloadFiles()
-           const scriptPath = path.join('/servers', `${this.serverId}-${this.port}`, 'setupServer.sh');
+           log.info("Files Downloaded")
+           const scriptPath = path.join( __dirname,'servers', `${this.serverId}-${this.port}`, 'setupServer.sh');
            await exfs.ensureFile(scriptPath);
+           log.info("Starting Child Server")
            fs.chmodSync(scriptPath, '755');
            exec(`bash ${scriptPath} ${this.port} ${this.gamePort}`, (error, stdout, stderr) => {
                if (error) {
