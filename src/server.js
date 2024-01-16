@@ -7,8 +7,9 @@ const stream = require('stream');
 const { promisify} = require('util');
 const crypto = require("crypto");
 const { exec } = require('child_process');
+const log = require('simple-node-logger').createSimpleLogger('head.log');
 
-console.log("Server Required")
+log.info("Server Required")
 
 const s3Client = new S3({
     forcePathStyle: false,
@@ -52,9 +53,9 @@ class ChildServer {
                     await checkPort(port);
                     await checkPort(port+1);
                     isAvailable = true;
-                    console.log(port)
+                    log.info(port)
                 } catch (err) {
-                    console.log(`Port ${port} is in use, trying another one...`);
+                    log.info(`Port ${port} is in use, trying another one...`);
                 }
             }
             resolve(port);
@@ -77,7 +78,7 @@ class ChildServer {
                    console.error(`Stderr: ${stderr}`);
                    return;
                }
-               console.log(`Stdout: ${stdout}`);
+               log.info(`Stdout: ${stdout}`);
            });
        })
     }
@@ -100,7 +101,7 @@ class ChildServer {
             //     await pipeline(Body, fs.createWriteStream(`${this.serverId}-${this.port}`));
             // }
         }).catch(err=>{
-            console.log(err)
+            log.info(err)
         })
     }
 }

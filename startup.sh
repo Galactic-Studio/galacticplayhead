@@ -22,6 +22,6 @@ adduser --disabled-password --gecos "" dataserver
 usermod -aG sudo dataserver
 
 # Start the application using PM2
-pm2 start main.js > log.log
+pm2 start main.js
 
 echo Head Server Is Ready and running
