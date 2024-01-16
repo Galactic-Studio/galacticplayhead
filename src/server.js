@@ -1,5 +1,5 @@
 const net = require('net');
-const { S3Client, ListObjectsV2Command, GetObjectCommand } = require("@aws-sdk/client-s3");
+const { S3Client, ListObjectsV2Command, GetObjectCommand, S3} = require("@aws-sdk/client-s3");
 const fs = require('fs')
 const exfs = require('fs-extra')
 const path = require('path');
@@ -7,21 +7,8 @@ const stream = require('stream');
 const { promisify} = require('util');
 const crypto = require("crypto");
 const { exec } = require('child_process');
-const winston = require("winston");
-const logger = winston.createLogger({
-    level: 'info',
-    format: winston.format.json(),
-    defaultMeta: { service: 'user-service' },
-    transports: [
-        //
-        // - Write all logs with importance level of `error` or less to `error.log`
-        // - Write all logs with importance level of `info` or less to `combined.log`
-        //
-        new winston.transports.File({ filename: 'error.log', level: 'error' }),
-        new winston.transports.File({ filename: 'logs.log' }),
-    ],
-});
-logger.info("Sever Required")
+
+console.log("Server Required")
 
 const s3Client = new S3({
     forcePathStyle: false,
@@ -41,7 +28,6 @@ function checkPort(port) {
             });
             server.close();
         });
-
         server.on('error', (err) => {
             reject(err);
         });
@@ -61,14 +47,14 @@ class ChildServer {
             let port;
             let isAvailable = false;
             while (!isAvailable) {
-                port = Math.floor(100000 + Math.random() * 900000);
+                port = Math.floor(10000 + Math.random() * 90000);
                 try {
                     await checkPort(port);
                     await checkPort(port+1);
                     isAvailable = true;
                     console.log(port)
                 } catch (err) {
-                    logger.info(`Port ${port} is in use, trying another one...`);
+                    console.log(`Port ${port} is in use, trying another one...`);
                 }
             }
             resolve(port);
@@ -84,14 +70,14 @@ class ChildServer {
            fs.chmodSync(scriptPath, '755');
            exec(`bash ${scriptPath} ${this.port} ${this.gamePort}`, (error, stdout, stderr) => {
                if (error) {
-                   logger.error(`Error: ${error.message}`);
+                   console.error(`Error: ${error.message}`);
                    return;
                }
                if (stderr) {
-                   logger.error(`Stderr: ${stderr}`);
+                   console.error(`Stderr: ${stderr}`);
                    return;
                }
-               logger.info(`Stdout: ${stdout}`);
+               console.log(`Stdout: ${stdout}`);
            });
        })
     }
@@ -104,15 +90,17 @@ class ChildServer {
             if (!files.Contents) {
                 throw new Error('Folder not found or is empty');
             }
-            for (const object of files.Contents) {
-                const getObjectCommand = new GetObjectCommand({
-                    Bucket: this.owner,
-                    Key: object.key
-                });
-                const { Body } = await s3Client.send(getObjectCommand);
-                const pipeline = promisify(stream.pipeline);
-                await pipeline(Body, fs.createWriteStream(`${this.serverId}-${this.port}`));
-            }
+            // for (const object of files.Contents) {
+            //     const getObjectCommand = new GetObjectCommand({
+            //         Bucket: "galacticstudio",
+            //         Key: object.key
+            //     });
+            //     const { Body } = await s3Client.send(getObjectCommand);
+            //     const pipeline = promisify(stream.pipeline);
+            //     await pipeline(Body, fs.createWriteStream(`${this.serverId}-${this.port}`));
+            // }
+        }).catch(err=>{
+            console.log(err)
         })
     }
 }
