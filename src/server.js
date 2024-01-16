@@ -66,6 +66,7 @@ class ChildServer {
                     await checkPort(port);
                     await checkPort(port+1);
                     isAvailable = true;
+                    console.log(port)
                 } catch (err) {
                     logger.info(`Port ${port} is in use, trying another one...`);
                 }
