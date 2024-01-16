@@ -7,6 +7,21 @@ const stream = require('stream');
 const { promisify} = require('util');
 const crypto = require("crypto");
 const { exec } = require('child_process');
+const winston = require("winston");
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    defaultMeta: { service: 'user-service' },
+    transports: [
+        //
+        // - Write all logs with importance level of `error` or less to `error.log`
+        // - Write all logs with importance level of `info` or less to `combined.log`
+        //
+        new winston.transports.File({ filename: 'error.log', level: 'error' }),
+        new winston.transports.File({ filename: 'logs.log' }),
+    ],
+});
+logger.info("Sever Required")
 
 const s3Client = new S3({
     forcePathStyle: false,
@@ -52,7 +67,7 @@ class ChildServer {
                     await checkPort(port+1);
                     isAvailable = true;
                 } catch (err) {
-                    console.log(`Port ${port} is in use, trying another one...`);
+                    logger.info(`Port ${port} is in use, trying another one...`);
                 }
             }
             resolve(port);
@@ -68,14 +83,14 @@ class ChildServer {
            fs.chmodSync(scriptPath, '755');
            exec(`bash ${scriptPath} ${this.port} ${this.gamePort}`, (error, stdout, stderr) => {
                if (error) {
-                   console.error(`Error: ${error.message}`);
+                   logger.error(`Error: ${error.message}`);
                    return;
                }
                if (stderr) {
-                   console.error(`Stderr: ${stderr}`);
+                   logger.error(`Stderr: ${stderr}`);
                    return;
                }
-               console.log(`Stdout: ${stdout}`);
+               logger.info(`Stdout: ${stdout}`);
            });
        })
     }
