@@ -68,12 +68,8 @@ class ChildServer {
            log.info("Downloading Files")
            await this.downloadFiles()
            log.info("Files Downloaded")
-           const scriptPath = path.join(__dirname,'..','servers', `${this.game}-${this.port}`, 'setupServer.sh');
-           log.info(scriptPath)
-           await exfs.ensureFile(scriptPath);
            log.info("Starting Child Server")
-           fs.chmodSync(scriptPath, '755');
-           exec(`bash ${scriptPath} ${this.port} ${this.gamePort}`, (error, stdout, stderr) => {
+           exec(`bash startServer.sh ${this.game} ${this.port} ${this.gamePort}`, (error, stdout, stderr) => {
                if (error) {
                    console.error(`Error: ${error.message}`);
                    return;
