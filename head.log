@@ -49,3 +49,64 @@
 18:05:34.935 INFO  Files Downloaded 
 18:05:34.935 INFO  servers\test-57172\setupServer.sh 
 18:05:34.938 INFO  Starting Child Server 
+22:23:13.886 INFO  Logger Started 
+22:23:14.905 INFO  Server Required 
+22:23:14.911 INFO  Port 91592 is in use, trying another one... 
+22:23:14.914 INFO  42768 
+22:23:14.914 INFO  Downloading Files 
+22:23:15.164 INFO  test/test/ 
+22:23:15.164 INFO  test/test/game/ 
+22:23:15.164 INFO  game/ 
+22:23:15.305 INFO  test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
+22:24:38.009 INFO  Logger Started 
+22:24:38.318 INFO  Server Required 
+22:24:38.326 INFO  22277 
+22:24:38.326 INFO  Downloading Files 
+22:24:38.484 INFO  test/test/ 
+22:24:38.484 INFO  test/test/game/ 
+22:24:38.484 INFO  test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
+22:24:38.484 INFO  game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
+22:24:38.769 INFO  test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
+22:24:38.769 INFO  game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
+22:24:42.824 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_api_dump.json 
+22:24:42.824 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_api_dump.json 
+22:24:43.036 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_gfxreconstruct.json 
+22:24:43.036 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_gfxreconstruct.json 
+22:24:43.183 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_profiles.json 
+22:24:43.183 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_profiles.json 
+22:24:43.351 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_synchronization2.json 
+22:24:43.352 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_synchronization2.json 
+22:24:43.500 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_validation.json 
+22:24:43.500 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_validation.json 
+22:24:43.650 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_api_dump.so 
+22:24:43.650 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_api_dump.so 
+22:25:12.345 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_gfxreconstruct.so 
+22:25:12.345 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_gfxreconstruct.so 
+22:25:24.026 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_profiles.so 
+22:25:24.026 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_profiles.so 
+22:25:24.893 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_synchronization2.so 
+22:25:24.893 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_synchronization2.so 
+22:25:28.279 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_validation.so 
+22:25:28.279 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_validation.so 
+22:27:01.351 INFO  test/test/game/Engine/Content/SlateDebug/Fonts/LastResort.tps 
+22:27:01.351 INFO  game/Engine/Content/SlateDebug/Fonts/LastResort.tps 
+22:27:01.577 INFO  test/test/game/Engine/Content/SlateDebug/Fonts/LastResort.ttf 
+22:27:01.577 INFO  game/Engine/Content/SlateDebug/Fonts/LastResort.ttf 
+22:27:04.720 INFO  Logger Started 
+22:27:05.035 INFO  Server Required 
+22:27:05.043 INFO  54429 
+22:27:05.043 INFO  Downloading Files 
+22:27:05.226 INFO  Downloading test/test/ 
+22:27:05.226 INFO  Downloading test/test/game/ 
+22:27:05.226 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
+22:27:05.526 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
+22:27:07.687 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_api_dump.json 
+22:27:07.800 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_gfxreconstruct.json 
+22:27:07.862 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_profiles.json 
+22:27:07.943 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_synchronization2.json 
+22:27:08.003 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_validation.json 
+22:27:08.087 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_api_dump.so 
+22:27:33.180 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_gfxreconstruct.so 
+22:27:42.446 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_profiles.so 
+22:27:43.698 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_synchronization2.so 
+22:27:46.022 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_validation.so 
