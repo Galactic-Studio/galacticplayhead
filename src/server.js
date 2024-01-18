@@ -36,11 +36,12 @@ function checkPort(port) {
 }
 
 class ChildServer {
-    constructor(name, ownerId, gameId) {
+    constructor(name, ownerId, gameId, map) {
         this.name = name
         this.owner = ownerId
         this.game = gameId
         this.serverId = crypto.randomUUID()
+        this.map = map
     }
 
     static generatePort(){
@@ -69,7 +70,7 @@ class ChildServer {
            await this.downloadFiles()
            log.info("Files Downloaded")
            log.info("Starting Child Server")
-           exec(`bash startServer.sh ${this.game} ${this.port} ${this.gamePort}`, (error, stdout, stderr) => {
+           exec(`bash startServer.sh ${this.game} ${this.port} ${this.gamePort} ${this.map} GalacticVanguardServer`, (error, stdout, stderr) => {
                if (error) {
                    console.error(`Error: ${error.message}`);
                    return;

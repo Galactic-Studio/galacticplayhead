@@ -3,6 +3,8 @@
 GAME_ID=$1
 PORT=$2
 GAMESERVER_PORT=$3
+SERVER_MAP=$4
+SERVER_SH=$5
 
 cd servers/"$GAME_ID"-"$PORT" || exit
 
@@ -27,6 +29,6 @@ echo "Nginx configured and restarted."
 
 npm install
 
-pm2 start index.js --name "$PORT" -- "$PORT" "$GAMESERVER_PORT" "$GAME_ID"
+pm2 start index.js --name "$PORT" -- "$PORT" "$GAMESERVER_PORT" "$GAME_ID" "$SERVER_MAP" "$SERVER_SH"
 
 echo "Server is ready and running."
