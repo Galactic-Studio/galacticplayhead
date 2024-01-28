@@ -18,6 +18,8 @@ app.post("/createGameServer/:serverId", async (req, res)=>{
     if (req.headers.Authroization === wrapper.authCode){
         log.info(data)
         let server = new ChildServer(data.name, data.ownerId, data.gameId, data.serverMap, req.params.serverId)
+        server.startChildServer()
+        res.status(201).send("Server Started")
     }
 })
 

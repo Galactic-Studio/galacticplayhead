@@ -9,8 +9,6 @@ const crypto = require("crypto");
 const { exec } = require('child_process');
 const log = require('simple-node-logger').createSimpleLogger('head.log');
 
-log.info("Server Required")
-
 const s3Client = new S3({
     forcePathStyle: false,
     endpoint: "https://nyc3.digitaloceanspaces.com",
