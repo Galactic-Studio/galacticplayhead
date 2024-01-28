@@ -20,6 +20,8 @@ app.post("/createGameServer/:serverId", async (req, res)=>{
         let server = new ChildServer(data.name, data.ownerId, data.gameId, data.serverMap, req.params.serverId)
         server.startChildServer()
         res.status(201).send("Server Started")
+    }else{
+        res.status(401).send("Bad Auth Code")
     }
 })
 
