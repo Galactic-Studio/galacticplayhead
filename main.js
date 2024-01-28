@@ -10,7 +10,7 @@ const sys = require('systeminformation');
 app.use(express.json());
 const port = 8080;
 
-//wrapper.sendServerReady()
+
 
 app.listen(port);
 
@@ -41,4 +41,4 @@ async function getDropletUsage() {
         console.error(`Error getting system info: ${error}`);
     }
 }
-getDropletUsage()
+wrapper.sendServerReady()
