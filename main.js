@@ -10,15 +10,13 @@ const sys = require('systeminformation');
 app.use(express.json());
 const port = 8080;
 
-
-
 app.listen(port);
 
 app.post("/createGameServer/:serverId", async (req, res)=>{
     let data = req.body
-    console.log(data)
+    log.info(data)
     if (req.headers.Authroization === wrapper.authCode){
-        console.log(data)
+        log.info(data)
         let server = new ChildServer(data.name, data.ownerId, data.gameId, data.serverMap, req.params.serverId)
     }
 })
@@ -31,14 +29,15 @@ async function getDropletUsage() {
         const cpu = await sys.cpuCurrentSpeed();
         const memory = await sys.mem();
         const disk = await sys.fsSize();
-        console.log(cpu)
-        console.log(`CPU Load: ${cpu.max.toFixed(2)}%`);
-        console.log(`CPU Free: ${(100 - cpu).toFixed(2)}%`);
-        console.log(`Free Memory: ${((memory.free / (1024 ** 3)).toFixed(2))} GB`);
-        console.log(`Total Memory: ${((memory.total / (1024 ** 3)).toFixed(2))} GB`);
-        console.log(`Disk Usage: ${disk.map(d => `${d.fs}: ${((d.size - d.used) / (1024 ** 3)).toFixed(2)} GB free`).join(', ')}`);
+        log.info(cpu)
+        log.info(`CPU Load: ${cpu.max.toFixed(2)}%`);
+        log.info(`CPU Free: ${(100 - cpu).toFixed(2)}%`);
+        log.info(`Free Memory: ${((memory.free / (1024 ** 3)).toFixed(2))} GB`);
+        log.info(`Total Memory: ${((memory.total / (1024 ** 3)).toFixed(2))} GB`);
+        log.info(`Disk Usage: ${disk.map(d => `${d.fs}: ${((d.size - d.used) / (1024 ** 3)).toFixed(2)} GB free`).join(', ')}`);
     } catch (error) {
-        console.error(`Error getting system info: ${error}`);
+        log.info(`Error getting system info: ${error}`);
     }
 }
 wrapper.sendServerReady()
+getDropletUsage()
