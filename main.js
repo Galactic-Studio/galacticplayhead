@@ -1,4 +1,4 @@
-const log = require('simple-node-logger').createSimpleLogger('head.log');
+const log = require('simple-node-logger').createSimpleLogger('headOutput.log');
 
 log.info("Logger Started")
 const {ChildServer} = require("./src/server")
@@ -40,4 +40,3 @@ async function getDropletUsage() {
     }
 }
 wrapper.sendServerReady()
-getDropletUsage()
