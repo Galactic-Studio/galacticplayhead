@@ -1,156 +1,72 @@
-17:57:10.169 INFO  Server Required 
-17:57:10.183 INFO  Port 79087 is in use, trying another one... 
-17:57:10.186 INFO  46520 
-17:57:10.186 INFO  Downloading Files 
-17:57:09.526 INFO  Logger Started 
-17:57:10.407 INFO  test/test/ 
-17:58:00.365 INFO  Logger Started 
-17:58:00.981 INFO  Server Required 
-17:58:00.987 INFO  Port 71229 is in use, trying another one... 
-17:58:00.989 INFO  40321 
-17:58:00.989 INFO  Downloading Files 
-17:58:01.127 INFO  test/test/ 
-18:00:02.507 INFO  Logger Started 
-18:00:03.144 INFO  Server Required 
-18:00:03.152 INFO  38514 
-18:00:03.152 INFO  Downloading Files 
-18:00:03.331 INFO  test/test/ 
-18:00:03.331 INFO  test/test/main.js 
-18:00:03.331 INFO  test/test/package.json 
-18:00:03.331 INFO  test/test/startup.sh 
-18:00:03.331 INFO  Files Downloaded 
-18:00:03.331 INFO  servers\test-38514\setupServer.sh 
-18:00:03.378 INFO  Starting Child Server 
-18:00:47.513 INFO  Logger Started 
-18:00:48.151 INFO  Server Required 
-18:00:48.158 INFO  32258 
-18:00:48.158 INFO  Downloading Files 
-18:00:48.296 INFO  test/test/ 
-18:04:04.653 INFO  Logger Started 
-18:04:05.305 INFO  Server Required 
-18:04:05.311 INFO  Port 69448 is in use, trying another one... 
-18:04:05.311 INFO  Port 83134 is in use, trying another one... 
-18:04:05.311 INFO  Port 89192 is in use, trying another one... 
-18:04:05.311 INFO  Port 84281 is in use, trying another one... 
-18:04:05.313 INFO  48867 
-18:04:05.313 INFO  Downloading Files 
-18:04:05.501 INFO  test/test/ 
-18:04:05.501 INFO  Is dir 
-18:04:05.501 INFO  test/test/main.js 
-18:05:33.836 INFO  Logger Started 
-18:05:34.492 INFO  Server Required 
-18:05:34.499 INFO  57172 
-18:05:34.499 INFO  Downloading Files 
-18:05:34.673 INFO  test/test/ 
-18:05:34.673 INFO  Is dir 
-18:05:34.673 INFO  test/test/main.js 
-18:05:34.811 INFO  test/test/package.json 
-18:05:34.875 INFO  test/test/startup.sh 
-18:05:34.935 INFO  Files Downloaded 
-18:05:34.935 INFO  servers\test-57172\setupServer.sh 
-18:05:34.938 INFO  Starting Child Server 
-22:23:13.886 INFO  Logger Started 
-22:23:14.905 INFO  Server Required 
-22:23:14.911 INFO  Port 91592 is in use, trying another one... 
-22:23:14.914 INFO  42768 
-22:23:14.914 INFO  Downloading Files 
-22:23:15.164 INFO  test/test/ 
-22:23:15.164 INFO  test/test/game/ 
-22:23:15.164 INFO  game/ 
-22:23:15.305 INFO  test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
-22:24:38.009 INFO  Logger Started 
-22:24:38.318 INFO  Server Required 
-22:24:38.326 INFO  22277 
-22:24:38.326 INFO  Downloading Files 
-22:24:38.484 INFO  test/test/ 
-22:24:38.484 INFO  test/test/game/ 
-22:24:38.484 INFO  test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
-22:24:38.484 INFO  game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
-22:24:38.769 INFO  test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
-22:24:38.769 INFO  game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
-22:24:42.824 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_api_dump.json 
-22:24:42.824 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_api_dump.json 
-22:24:43.036 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_gfxreconstruct.json 
-22:24:43.036 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_gfxreconstruct.json 
-22:24:43.183 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_profiles.json 
-22:24:43.183 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_profiles.json 
-22:24:43.351 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_synchronization2.json 
-22:24:43.352 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_synchronization2.json 
-22:24:43.500 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_validation.json 
-22:24:43.500 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_validation.json 
-22:24:43.650 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_api_dump.so 
-22:24:43.650 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_api_dump.so 
-22:25:12.345 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_gfxreconstruct.so 
-22:25:12.345 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_gfxreconstruct.so 
-22:25:24.026 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_profiles.so 
-22:25:24.026 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_profiles.so 
-22:25:24.893 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_synchronization2.so 
-22:25:24.893 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_synchronization2.so 
-22:25:28.279 INFO  test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_validation.so 
-22:25:28.279 INFO  game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_validation.so 
-22:27:01.351 INFO  test/test/game/Engine/Content/SlateDebug/Fonts/LastResort.tps 
-22:27:01.351 INFO  game/Engine/Content/SlateDebug/Fonts/LastResort.tps 
-22:27:01.577 INFO  test/test/game/Engine/Content/SlateDebug/Fonts/LastResort.ttf 
-22:27:01.577 INFO  game/Engine/Content/SlateDebug/Fonts/LastResort.ttf 
-22:27:04.720 INFO  Logger Started 
-22:27:05.035 INFO  Server Required 
-22:27:05.043 INFO  54429 
-22:27:05.043 INFO  Downloading Files 
-22:27:05.226 INFO  Downloading test/test/ 
-22:27:05.226 INFO  Downloading test/test/game/ 
-22:27:05.226 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
-22:27:05.526 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
-22:27:07.687 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_api_dump.json 
-22:27:07.800 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_gfxreconstruct.json 
-22:27:07.862 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_profiles.json 
-22:27:07.943 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_synchronization2.json 
-22:27:08.003 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_validation.json 
-22:27:08.087 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_api_dump.so 
-22:27:33.180 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_gfxreconstruct.so 
-22:27:42.446 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_profiles.so 
-22:27:43.698 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_synchronization2.so 
-22:27:46.022 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_khronos_validation.so 
-22:37:25.641 INFO  Logger Started 
-22:37:25.900 INFO  Server Required 
-22:37:25.908 INFO  20991 
-22:37:25.908 INFO  Downloading Files 
-22:37:26.085 INFO  Downloading test/test/ 
-22:37:26.085 INFO  Downloading test/test/game/ 
-22:37:26.085 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
-22:37:26.762 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
-22:37:30.842 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_api_dump.json 
-22:37:31.029 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_gfxreconstruct.json 
-22:37:31.164 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_profiles.json 
-22:37:31.299 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_synchronization2.json 
-22:37:31.432 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_validation.json 
-22:37:31.561 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_api_dump.so 
-22:37:59.946 INFO  Logger Started 
-22:38:00.213 INFO  Server Required 
-22:38:00.219 INFO  Port 90901 is in use, trying another one... 
-22:38:00.219 INFO  Port 81720 is in use, trying another one... 
-22:38:00.219 INFO  Port 89873 is in use, trying another one... 
-22:38:00.219 INFO  Port 84235 is in use, trying another one... 
-22:38:00.222 INFO  36327 
-22:38:00.222 INFO  Downloading Files 
-22:38:00.363 INFO  Downloading test/test/ 
-22:38:00.363 INFO  Downloading test/test/game/ 
-22:38:00.363 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
-22:38:00.750 INFO  Files Downloaded 
-22:38:00.750 INFO  D:\galacticplayheadserver\servers\test-36327\setupServer.sh 
-22:38:00.755 INFO  Starting Child Server 
-22:38:00.812 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
-22:38:04.259 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_api_dump.json 
-22:38:04.378 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_gfxreconstruct.json 
-22:38:04.438 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_profiles.json 
-22:38:04.514 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_synchronization2.json 
-22:38:04.581 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/VkLayer_khronos_validation.json 
-22:38:04.640 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/Vulkan/Linux/libVkLayer_api_dump.so 
-22:38:33.912 INFO  Logger Started 
-22:38:34.195 INFO  Server Required 
-22:38:34.202 INFO  54749 
-22:38:34.202 INFO  D:\galacticplayheadserver\servers\test-54749\setupServer.sh 
-22:38:34.202 INFO  Downloading Files 
-22:38:34.411 INFO  Downloading test/test/ 
-22:38:34.411 INFO  Downloading test/test/game/ 
-22:38:34.411 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so 
-22:38:34.695 INFO  Downloading test/test/game/Engine/Binaries/ThirdParty/MsQuic/v220/linux/libmsquic.so.2 
+00:50:50.619 INFO  Logger Started 
+00:50:50.811 INFO  Server Required 
+00:54:29.555 INFO  Logger Started 
+00:54:29.774 INFO  Server Required 
+16:08:28.157 INFO  Logger Started 
+16:08:28.755 INFO  Server Required 
+16:08:42.622 INFO  Logger Started 
+16:08:43.233 INFO  Server Required 
+16:08:56.045 INFO  Logger Started 
+16:08:56.669 INFO  Server Required 
+16:09:05.926 INFO  Logger Started 
+16:09:06.531 INFO  Server Required 
+16:10:07.274 INFO  Logger Started 
+16:10:07.891 INFO  Server Required 
+16:10:20.110 INFO  Logger Started 
+16:10:20.738 INFO  Server Required 
+16:10:49.166 INFO  Logger Started 
+16:10:49.807 INFO  Server Required 
+16:11:03.735 INFO  Logger Started 
+16:11:04.394 INFO  Server Required 
+16:11:53.600 INFO  Logger Started 
+16:11:54.248 INFO  Server Required 
+16:12:12.088 INFO  Logger Started 
+16:12:12.734 INFO  Server Required 
+16:13:17.847 INFO  Logger Started 
+16:13:18.471 INFO  Server Required 
+16:14:22.075 INFO  Logger Started 
+16:14:22.710 INFO  Server Required 
+16:14:49.603 INFO  Logger Started 
+16:14:50.224 INFO  Server Required 
+16:16:07.406 INFO  Logger Started 
+16:16:08.037 INFO  Server Required 
+16:16:31.205 INFO  Logger Started 
+16:16:31.840 INFO  Server Required 
+16:16:39.933 INFO  Logger Started 
+16:16:40.561 INFO  Server Required 
+16:16:47.141 INFO  Logger Started 
+16:16:47.758 INFO  Server Required 
+16:16:55.475 INFO  Logger Started 
+16:16:56.103 INFO  Server Required 
+16:17:08.577 INFO  Logger Started 
+16:17:09.232 INFO  Server Required 
+16:17:22.769 INFO  Logger Started 
+16:17:23.399 INFO  Server Required 
+16:17:30.788 INFO  Logger Started 
+16:17:31.401 INFO  Server Required 
+16:17:36.766 INFO  Logger Started 
+16:17:37.376 INFO  Server Required 
+16:17:50.822 INFO  Logger Started 
+16:17:51.481 INFO  Server Required 
+16:17:58.906 INFO  Logger Started 
+16:17:59.563 INFO  Server Required 
+16:21:24.633 INFO  Logger Started 
+16:21:25.274 INFO  Server Required 
+16:25:36.307 INFO  Logger Started 
+16:25:36.929 INFO  Server Required 
+16:25:59.437 INFO  Logger Started 
+16:26:00.080 INFO  Server Required 
+16:30:07.764 INFO  Logger Started 
+16:30:08.392 INFO  Server Required 
+16:30:21.011 INFO  Logger Started 
+16:30:21.635 INFO  Server Required 
+16:30:38.199 INFO  Logger Started 
+16:30:38.828 INFO  Server Required 
+16:30:53.043 INFO  Logger Started 
+16:30:53.645 INFO  Server Required 
+16:31:35.194 INFO  Logger Started 
+16:31:35.844 INFO  Server Required 
+16:38:51.278 INFO  Logger Started 
+16:38:51.883 INFO  Server Required 
+16:39:06.746 INFO  Logger Started 
+16:39:07.419 INFO  Server Required 

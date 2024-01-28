@@ -1,10 +1,10 @@
 const net = require('net');
-const { S3Client, ListObjectsV2Command, GetObjectCommand, S3} = require("@aws-sdk/client-s3");
+const { ListObjectsV2Command, GetObjectCommand, S3} = require("@aws-sdk/client-s3");
 const fs = require('fs')
-const exfs = require('fs-extra')
 const path = require('path');
 const stream = require('stream');
 const { promisify} = require('util');
+const enums = require("./enums")
 const crypto = require("crypto");
 const { exec } = require('child_process');
 const log = require('simple-node-logger').createSimpleLogger('head.log');
@@ -36,12 +36,14 @@ function checkPort(port) {
 }
 
 class ChildServer {
-    constructor(name, ownerId, gameId, map) {
+    constructor(name, ownerId, gameId, map, serverId) {
         this.name = name
         this.owner = ownerId
-        this.game = gameId
-        this.serverId = crypto.randomUUID()
+        this.gameId = gameId
+        this.serverId = serverId
         this.map = map
+        this.authCode = crypto.randomBytes(32).toString('hex');
+        this.status = enums.gameServerStatus.Starting
     }
 
     static generatePort(){
@@ -70,7 +72,7 @@ class ChildServer {
            await this.downloadFiles()
            log.info("Files Downloaded")
            log.info("Starting Child Server")
-           exec(`bash startServer.sh ${this.game} ${this.port} ${this.gamePort} ${this.map} GalacticVanguardServer`, (error, stdout, stderr) => {
+           exec(`bash startServer.sh ${this.gameId} ${this.port} ${this.gamePort} ${this.map} ${this.authCode} GalacticVanguardServer ${this.name} ${this.serverId}`, (error, stdout, stderr) => {
                if (error) {
                    console.error(`Error: ${error.message}`);
                    return;
@@ -81,13 +83,14 @@ class ChildServer {
                }
                log.info(`Stdout: ${stdout}`);
            });
+         resolve()
        })
     }
     downloadFiles(){
         return new Promise(async (resolve, reject) => {
             const files = await s3Client.send(new ListObjectsV2Command({
                 Bucket: "galacticstudio",
-                Prefix: `${this.owner}/${this.game}`
+                Prefix: `${this.owner}/${this.gameId}`
             }))
             if (!files.Contents) {
                 throw new Error('Folder not found or is empty');
