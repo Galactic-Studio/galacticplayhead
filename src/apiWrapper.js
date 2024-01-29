@@ -26,12 +26,12 @@ async function sendServerReady(){
     log.info(`Server sending ready: ${serverId}`)
     let request = await axios.request({
         method: "post",
-        url:`api.gplay.galacticstudio.space/allowHeadServer/${serverId}`,
+        url:`https://api.gplay.galacticstudio.space/allowHeadServer/${serverId}`,
         headers:{
             'Authorization': authCode
         }
     })
-    log.info(request)
+    log.info("Server Ready")
 }
 module.exports = {
     sendServerReady,
