@@ -44,6 +44,8 @@ async function sendServerReady(){
             }
         }).then(res =>{
             resolve()
+        }).catch(err =>{
+            log.info(err)
         })
         log.info("Server Ready")
         log.info(request)
