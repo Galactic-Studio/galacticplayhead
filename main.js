@@ -1,5 +1,5 @@
 const log = require('simple-node-logger').createSimpleLogger('headOutput.log');
-
+log.info("Starting Head Server")
 log.info("Logger Started")
 const {ChildServer} = require("./src/server")
 const express = require("express");
@@ -44,3 +44,4 @@ async function getDropletUsage() {
     }
 }
 wrapper.sendServerReady()
+log.info("Head Server is Ready")
