@@ -18,7 +18,7 @@ function getServer(){
     return new Promise (resolve => {
         serverId =  fs.readFileSync(path.join(__dirname, "..", ".server"), 'utf8').trim();
         log.info('Server ID:', serverId);
-        resolve()
+        resolve(serverId)
     })
 }
 
@@ -26,7 +26,7 @@ function getAuth(){
     return new Promise (resolve => {
         authCode = fs.readFileSync(path.join(__dirname, "..", ".auth"), 'utf8').trim();
         log.info('Auth Code:', authCode);
-        resolve()
+        resolve(authCode)
     })
 }
 
@@ -54,6 +54,6 @@ async function sendServerReady(){
 }
 module.exports = {
     sendServerReady,
-    authCode,
-    serverId
+    getAuth,
+    getServer
 }
