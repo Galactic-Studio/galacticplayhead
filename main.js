@@ -16,6 +16,8 @@ app.listen(port);
 app.post("/createGameServer/:serverId", async (req, res)=>{
     let data = req.body
     log.info(data)
+    log.info(wrapper.authCode)
+    log.info(req.headers.Authroization.trim() === wrapper.authCode)
     if (req.headers.Authroization.trim() === wrapper.authCode){
         log.info(data)
         log.info("Starting a Game Server")
