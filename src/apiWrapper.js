@@ -14,7 +14,7 @@ try {
 }
 
 async function sendServerReady(serverId){
-    log.info("Server sending ready")
+    log.info(`Server sending ready: ${serverId}`)
     let request = await axios.request({
         method: "post",
         url:`api.gplay.galacticstudio.space/allowHeadServer/${serverId}`,
