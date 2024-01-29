@@ -91,6 +91,7 @@ class ChildServer {
                 Prefix: `${this.owner}/${this.gameId}`
             }))
             if (!files.Contents) {
+                log.info(`Folder not found or is empty`)
                 throw new Error('Folder not found or is empty');
             }
             const totalSize = files.Contents.reduce((acc, obj) => acc + (obj.Size || 0), 0);
