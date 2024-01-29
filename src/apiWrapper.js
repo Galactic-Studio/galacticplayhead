@@ -16,7 +16,7 @@ try {
 
 function getServer(){
     return new Promise (resolve => {
-        serverId =  fs.readFileSync(path.join(__dirname, "..", ".server"), 'utf8');
+        serverId =  fs.readFileSync(path.join(__dirname, "..", ".server"), 'utf8').trim();
         log.info('Server ID:', serverId);
         resolve()
     })
@@ -24,7 +24,7 @@ function getServer(){
 
 function getAuth(){
     return new Promise (resolve => {
-        authCode = fs.readFileSync(path.join(__dirname, "..", ".auth"), 'utf8');
+        authCode = fs.readFileSync(path.join(__dirname, "..", ".auth"), 'utf8').trim();
         log.info('Auth Code:', authCode);
         resolve()
     })
