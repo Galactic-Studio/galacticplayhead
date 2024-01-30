@@ -29,6 +29,8 @@ sed -i "/location \/ {/,/}/ s/proxy_pass http:\/\/localhost:[0-9]*;/proxy_pass h
 sudo nginx -t && sudo systemctl restart nginx
 echo "Nginx configured and restarted."
 
+sudo chmod +x startServer.sh
+
 npm install
 
 pm2 start index.js --name "$PORT" -- "$PORT" "$GAMESERVER_PORT" "$GAME_ID" "$SERVER_MAP" "$AUTH_CODE" "$SERVER_SH" "$SERVERNAME" "$SERVER_ID"
