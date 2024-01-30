@@ -6,7 +6,7 @@ const stream = require('stream');
 const { promisify} = require('util');
 const enums = require("./enums")
 const crypto = require("crypto");
-const { execFile } = require('child_process');
+const { exec } = require('child_process');
 const log = require('simple-node-logger').createSimpleLogger('head.log');
 
 const s3Client = new S3({
@@ -70,7 +70,7 @@ class ChildServer {
            await this.downloadFiles()
            log.info("Files Downloaded")
            log.info("Starting Child Server")
-           execFile(`startServer.sh ${this.gameId} ${this.port} ${this.gamePort} ${this.map} ${this.authCode} GalacticVanguardServer ${this.name} ${this.serverId}`, (error, stdout, stderr) => {
+           exec(`bash startServer.sh ${this.gameId} ${this.port} ${this.gamePort} ${this.map} ${this.authCode} GalacticVanguardServer ${this.name} ${this.serverId}`, (error, stdout, stderr) => {
                if (error) {
                    log.info(`Error: ${error.message}`);
                    return;
