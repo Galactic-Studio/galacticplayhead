@@ -108,7 +108,7 @@ class ChildServer {
                     Key: object.Key
                 });
                 const localPath = object.Key.split('/').slice(2).join('/');
-                const dir = path.join('servers', `${this.game}-${this.port}`, path.dirname(localPath));
+                const dir = path.join('servers', `${this.gameId}-${this.port}`, path.dirname(localPath));
                 if (!fs.existsSync(dir)){
                     fs.mkdirSync(dir, { recursive: true });
                 }
