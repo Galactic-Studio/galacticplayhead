@@ -29,7 +29,7 @@ sed -i "/location \/ {/,/}/ s/proxy_pass http:\/\/localhost:[0-9]*;/proxy_pass h
 sudo nginx -t && sudo systemctl restart nginx
 echo "Nginx configured and restarted."
 
-sudo chmod +x startServer.sh
+sudo chmod +x startGameServer.sh
 
 npm install
 
