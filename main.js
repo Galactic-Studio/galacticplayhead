@@ -20,7 +20,7 @@ app.post("/createGameServer/:serverId", async (req, res)=>{
     if (req.headers.authorization === auth){
         log.info(data)
         log.info("Starting a Game Server")
-        let server = new ChildServer(data.name, data.ownerId, data.gameId, data.serverMap, req.params.serverId)
+        let server = new ChildServer(data.serverName, data.ownerId, data.gameId, data.serverMap, req.params.serverId)
         log.info(server)
         server.startChildServer()
         res.status(201).send("Server Started")
