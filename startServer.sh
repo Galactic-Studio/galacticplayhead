@@ -5,9 +5,8 @@ PORT=$2
 GAMESERVER_PORT=$3
 SERVER_MAP=$4
 AUTH_CODE=$5
-SERVER_SH=$6
-SERVERNAME=$7
-SERVER_ID=$8
+SERVERNAME=$6
+SERVER_ID=$7
 cd servers/"$GAME_ID"-"$PORT" || exit
 
 exec > startLog.out 2>&1
@@ -33,6 +32,6 @@ sudo chmod +x startGameServer.sh
 
 npm install
 
-pm2 start index.js --name "$PORT" -- "$PORT" "$GAMESERVER_PORT" "$GAME_ID" "$SERVER_MAP" "$AUTH_CODE" "$SERVER_SH" "$SERVERNAME" "$SERVER_ID"
+pm2 start index.js --name "$PORT" -- "$PORT" "$GAMESERVER_PORT" "$GAME_ID" "$SERVER_MAP" "$AUTH_CODE" "$SERVERNAME" "$SERVER_ID"
 
 echo "Server is ready and running."

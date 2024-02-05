@@ -70,7 +70,7 @@ class ChildServer {
            await this.downloadFiles()
            log.info("Files Downloaded")
            log.info("Starting Child Server")
-           exec(`bash startServer.sh ${this.gameId} ${this.port} ${this.gamePort} ${this.map} ${this.authCode} GalacticVanguardServer ${this.name} ${this.serverId}`, (error, stdout, stderr) => {
+           exec(`bash startServer.sh ${this.gameId} ${this.port} ${this.gamePort} ${this.map} ${this.authCode} ${this.name} ${this.serverId}`, (error, stdout, stderr) => {
                if (error) {
                    log.info(`Error: ${error.message}`);
                    return;
