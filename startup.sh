@@ -5,6 +5,7 @@ export HOME=/home/root
 
 exec > startLog.out 2>&1
 
+pm2 restart all
 # Configure Nginx to proxy requests to Galactic Studio
 EXPRESS_PORT=8080
 
