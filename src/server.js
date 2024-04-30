@@ -66,6 +66,7 @@ class ChildServer {
        return new Promise(async (resolve, reject) => {
            this.port = await ChildServer.generatePort()
            this.gamePort = this.port+1;
+           log.info(`${this.owner}/${this.gameId}`)
            log.info("Downloading Files")
            await this.downloadFiles()
            log.info("Files Downloaded")
