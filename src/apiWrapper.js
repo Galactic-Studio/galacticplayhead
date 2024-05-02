@@ -50,10 +50,30 @@ async function sendServerReady(){
         log.info("Server Ready")
         log.info(request)
     })
-
+}
+async function sendServerShutdown(){
+    return new Promise(async resolve => {
+        await getServer()
+        await getAuth()
+        log.info(`Server sending shutdown: ${serverId}`)
+        let request = axios.request({
+            method: "delete",
+            url:`https://api.gplay.galacticstudio.space/stopHeadServer/${serverId}`,
+            headers:{
+                'Authorization': authCode
+            }
+        }).then(res =>{
+            resolve()
+        }).catch(err =>{
+            log.info(err)
+        })
+        log.info("Server Ready")
+        log.info(request)
+    })
 }
 module.exports = {
     sendServerReady,
     getAuth,
-    getServer
+    getServer,
+    sendServerShutdown
 }
