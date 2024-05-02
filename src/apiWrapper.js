@@ -60,7 +60,8 @@ async function sendServerShutdown(){
             method: "delete",
             url:`https://api.gplay.galacticstudio.space/stopHeadServer/${serverId}`,
             headers:{
-                'Authorization': authCode
+                'authorization': authCode,
+                'requester': 'head'
             }
         }).then(res =>{
             resolve()
